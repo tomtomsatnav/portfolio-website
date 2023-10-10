@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Tom Mitchell - Web Developer</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <style>
+    body {
+      font-family: "Playfair Display", serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1,
+    h2,
+    p,
+    a {
+      font-family: "Playfair Display", serif;
+    }
+
+    /* Create a two-column layout */
+    .two-column {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .bg-black {
+      background-color: black;
+    }
+
+    .bg-refactor-project {
+      background-image: url("images/refactor-project.jpg");
+    }
+
+    /* Set header and footer styles */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: black;
+      z-index: 1001;
+    }
+
+    footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: black;
+      z-index: 1001;
+    }
+
+    main {
+      padding-bottom: 80px;
+    }
+
+    #work {
+      position: relative;
+      z-index: 1000;
+    }
+
+    .buffer {
+      height: 100px;
+    }
+  </style>
+
+  <body>
+    <!-- main logo / nav -->
+    <header class="bg-black py-4 mb-4">
+      <div class="container mx-auto flex justify-between items-center">
+        <h1 id="name" class="text-3xl font-bold text-white ml-4">
+          Tom Mitchell
+        </h1>
+        <nav id="navLinks" class="text-white mr-8">
+          <a
+            id="aboutMe"
+            class="text-white hover:underline hover:cursor-pointer mr-4"
+            >About Me</a
+          >
+          <a id="work" class="text-white hover:underline mr-4">Work</a>
+          <a id="contactMe" class="text-white hover:underline mr-4"
+            >Contact Me</a
+          >
+          <a id="resume" class="text-white hover:underline mr-4">Resume</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- hero banner -->
+    <section class="heroBanner bg-gray-900 text-white py-20 relative">
+      <img
+        src="images/banner.jpg"
+        alt="Hero Banner"
+        class="absolute inset-0 w-full h-full object-cover object-center"
+      />
+      <div class="absolute inset-0 flex items-end justify-end">
+        <div class="bg-opacity-50 p-4 absolute bottom-0 right-0">
+          <h1 id="subtitle" class="text-2xl text-black">
+            An introduction to my work
+          </h1>
+        </div>
+      </div>
+    </section>
+
+    <main class="container mx-auto p-4">
+      <!-- About Me -->
+      <section class="pageSection two-column" id="about">
+        <div class="w-1/2">
+          <h2 class="text-2xl font-semibold">About Me</h2>
+        </div>
+        <div class="w-1/1">
+          <p class="text-gray-700">
+            My name is Tom, and I'm on an exciting journey as an aspiring
+            front-end developer. Currently, I'm enrolled in a rigorous front-end
+            development bootcamp where I'm honing my skills, learning the latest
+            web technologies, and striving to create visually appealing and
+            user-friendly websites.
+          </p>
+        </div>
+      </section>
+
+      <!-- Separator Line -->
+      <hr class="separator" />
+
+      <!-- portfolio container -->
+      <section class="pageSection two-column" id="work">
+        <div class="w-1/2">
+          <h2 class="text-2xl font-semibold">Work</h2>
+        </div>
+        <div class="w-1/2 relative mr-20">
+          <div class="bg-refactor-project h-64 bg-cover bg-center"></div>
+          <p class="text-gray-700 opacity-0 absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center transition-opacity hover:opacity-100 text-center">
+            <a href="https://github.com/tomtomsatnav/marketing-website-refactor/tree/main" target="_blank">This is a refactoring project<br />where I took existing code<br />and improved its semantic structure.<br />Click me to view the source code.</a>
+          </p>
+        </div>
+      </section>
+      
+
+      <!-- contact -->
+      <footer
+        class="bg-black py-4 text-white pageSection two-column"
+        id="contactMe"
+      >
+        <div class="w-1/2">
+          <section class="page-section contact" id="contact">
+            <h2 class="text-2xl font-semibold ml-4">Contact Me</h2>
+          </section>
+        </div>
+        <div class="w-1/1">
+          <a class="mr-4">07917161055</a>
+          <a
+            href="mailto:t.mitchell1998@yahoo.co.uk"
+            class="hover:underline mr-4"
+            >t.mitchell1998@yahoo.co.uk</a
+          >
+          <a
+            href="https://github.com/tomtomsatnav"
+            target="_blank"
+            class="hover:underline mr-4"
+            >GitHub</a
+          >
+        </div>
+      </footer>
+
+      <!-- Buffer to create space at the bottom -->
+      <div class="buffer"></div>
+    </main>
+  </body>
+</html>
